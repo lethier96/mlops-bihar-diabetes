@@ -10,7 +10,8 @@ from configparser import ConfigParser
 
 config = ConfigParser()
 config.read(CONFIG_PATH)
-DB_PATH = str(config.get("PATHS", "DB_PATH"))
+#TRAIN_PATH = str(config.get("PATHS", "TRAIN_PATHDB_PATH"))
+#Y_TRAIN_PATH = str(config.get("PATHS", "Y_TRAIN_PATH"))
 MODEL_PATH = str(config.get("PATHS", "MODEL_PATH"))
 RANDOM_STATE = int(config.get("ML", "RANDOM_STATE"))
 
@@ -25,7 +26,8 @@ RANDOM_STATE = int(config.get("ML", "RANDOM_STATE"))
 
 # SQLite requires the absolute path
 # DB_PATH = os.path.abspath(DB_PATH)
-DB_PATH = os.path.join(ROOT_DIR, os.path.normpath(DB_PATH))
+#TRAIN_PATH = os.path.join(ROOT_DIR, os.path.normpath(TRAIN_PATH))
+#Y_TRAIN_PATH = os.path.join(ROOT_DIR, os.path.normpath(Y_TRAIN_PATH))
 
 def preprocess_data(X):
     print(f"Preprocessing data")
