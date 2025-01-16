@@ -1,11 +1,14 @@
 from fastapi import FastAPI, HTTPException
 import uvicorn
+
+import sys
+sys.path.append('../')
 import common
 import numpy as np
 
 from pydantic import BaseModel, PrivateAttr, Field, PositiveFloat, computed_field, PositiveInt
 
-model = common.load_model(common.MODEL_PTH)
+model = common.load_model("../models//trip_duration.model")
 
 app = FastAPI()
 
